@@ -11,14 +11,15 @@ Flower Exchange System was developed as a part of the LSEG C++ workshop series f
   1. Most attractive order quantity = opponent order quantity
 
       _Both orders will be executed as "Fill" orders._
-  3. Most attractive order quantity < opponent order quantity
+  2. Most attractive order quantity < opponent order quantity
      
-      _The new order is executed as a 'Fill' order and the FOS/FBO* is executed as a 'PFill'._
-  5. Most attractive order quantity > opponent order quantity
+      _The new order is executed as a 'Fill' order and the FOS* / FBO** is executed as a 'PFill'._
+  3. Most attractive order quantity > opponent order quantity
      
-      _The FSO/FBO* will be executed as a 'Fill' order, and then the buy/sell order will be executed as a 'PFill'._
+      _The FOS* / FBO** will be executed as a 'Fill' order, and then the buy/sell order will be executed as a 'PFill'._
 
-*FSO refers to the topmost order of the sell-side (first sell order) and FBO refers to the topmost order of the buy-side (first buy order).
+* FSO - the topmost order of the sell-side (first sell order) 
+** FBO - the topmost order of the buy-side (first buy order)
   
 
 
