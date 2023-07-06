@@ -83,8 +83,6 @@ int main(void) {
 
     priority_queue<Order, vector<Order>, Compare>** orderBooks[5] = {roseOB, lavenderOB, lotusOB, tulipOB, orchidOB};
 
-    priority_queue<Order, vector<Order>, Compare>** orderBook = orderBooks[0];
-
     // I/O file handling
     ifstream fin;
     fin.open("order.csv", ios::in);
