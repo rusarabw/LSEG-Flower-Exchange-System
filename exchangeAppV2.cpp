@@ -149,7 +149,7 @@ int main(void) {
                         topOrder.remQty = topOrder.remQty - newOrder.remQty;
                         topOrder.priority++;
                         orderBook[1]->pop();
-                        orderBook[1]->push(topOrder);
+                        orderBook[1]->emplace(topOrder);
                         newOrder.remQty = 0;
                         break;
                     }
@@ -162,7 +162,7 @@ int main(void) {
 
                 // If the aggressive order is not fully executed, then put it into the order book 
                 if(newOrder.remQty > 0.0) {
-                    orderBook[0]->push(newOrder);
+                    orderBook[0]->emplace(newOrder);
                 }
 
             // Sell Side
@@ -203,7 +203,7 @@ int main(void) {
                         topOrder.remQty = topOrder.remQty - newOrder.remQty;
                         topOrder.priority++;
                         orderBook[0]->pop();
-                        orderBook[0]->push(topOrder);
+                        orderBook[0]->emplace(topOrder);
                         newOrder.remQty = 0;
                         break;
                     }
@@ -216,7 +216,7 @@ int main(void) {
 
                 // If the aggressive order is not fully executed, then put it into the order book 
                 if(newOrder.remQty > 0.0) {
-                    orderBook[1]->push(newOrder);
+                    orderBook[1]->emplace(newOrder);
                 }
             }
         } else {
